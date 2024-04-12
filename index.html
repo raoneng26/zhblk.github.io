@@ -1,0 +1,77 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+<meta charset="UTF-8">  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+<title>中华巴洛克建筑探索游戏</title>  
+
+<link rel="stylesheet" href="styles.css">  
+
+</head>  
+
+<body>  
+
+<div id="game-container">  
+
+    <div id="map-area">  
+        <!-- 角色矢量图 -->
+         <!-- https://www.iconfont.cn/illustrations/detail?spm=a313x.illustrations_index.i1.d9df05512.28373a81Um6msh&cid=48087 -->
+         <!-- https://www.iconfont.cn/illustrations/detail?spm=a313x.illustrations_index.i1.d9df05512.3e3f3a81PXO1iI&cid=45268 -->
+         
+        <div id="character1" class="interactive-item" data-character-index="0">
+            <img src="./img/奶奶.svg" alt="Character 1">
+        </div>
+        <div id="character2" class="interactive-item" data-character-index="1">
+            <img src="./img/man1.svg" alt="Character 2">
+        </div>
+        <div id="character3" class="interactive-item" data-character-index="2">
+            <img src="./img/建筑工人.svg" alt="Character 3">
+        </div>
+        <div id="character4" class="interactive-item" data-character-index="3">
+            <img src="./img/女护士.svg" alt="Character 4">
+        </div>
+       
+        <div id="location1" class="location" style="top: 270px; left: 280px; position: absolute;"></div>
+        <div id="location2" class="location" style="top: 580px;left: 1150px; position: absolute;"></div>
+        <div id="location3" class="location" style="top: 280px;left: 1230px; position: absolute;"></div>
+        <div id="location4" class="location" style="top: 550px;left: 970px; position: absolute;"></div>
+        <div id="location5" class="location" style="top: 160px;left: 910px; position: absolute;"></div>
+        <div id="location6" class="location" style="top: 260px;left: 885px; position: absolute;"></div>
+        <div id="location7" class="location" style="top: 160px;left: 590px; position: absolute;"></div>
+
+    </div>  
+
+
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Location Image">
+            <p id="modalText">Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <div id="dialog-area" style="visibility: hidden;">  <!-- 初始时隐藏对话框 -->
+        <div id="dialog-box">  
+            <p id="dialog-text"></p>  
+            <button id="continue-button">继续</button>  
+        </div>  
+    </div> 
+    
+
+</div>  
+    
+
+
+<script src="script.js"></script>  
+
+
+
+</body>  
+
+</html>
