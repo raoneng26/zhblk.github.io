@@ -1,0 +1,189 @@
+
+
+	body {  
+
+	  font-family: Arial, sans-serif;  
+
+	  margin: 0;  
+
+	  padding: 0;  
+
+	  background-color: #f0f0f0;  
+
+	}  
+
+	  
+
+	#game-container {  
+
+	  width: 100%;  
+
+	  max-width: 1540px;  
+
+	  margin: 0 auto;  
+
+	  padding: 20px;  
+
+	  box-sizing: border-box;  
+
+	}  
+
+	  
+
+	#map-area {  
+	  width: 100%;  
+
+	  height: 760px;  
+
+	  background-image: url('./img/map.jpg'); 
+
+	  background-size: cover;  
+
+	  position: relative;  
+
+	}  
+
+
+	.interactive-item {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+	}
+	.interactive-item:hover {
+		transform: scale(1.2);
+	}
+	#character1 {
+		position: absolute;
+		top: 70px;
+		left: 660px;
+	}
+	#character2 {
+		position: absolute;
+		top: 160px;
+		left: 1100px;
+	}
+	#character3 {
+		position: absolute;
+		top: 550px;
+		left: 100px;
+	}
+	#character4 {
+		position: absolute;
+		top: 570px;
+		left: 830px;
+	}
+	.interactive-item img {
+		width: 180%;
+		height: 180%;
+	}
+
+	#dialog-area {  
+		position: fixed;
+		margin-left: -80px;
+		bottom: 0;
+		width: 100%;
+		margin-top: 20px;  
+	}  
+	
+	#dialog-box {  
+		background-color: rgba(0, 0, 0, 0.5);  /* 修改为透明黑色 */
+		height: 134px;
+		padding: 15px;  
+		border-radius: 5px;  
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+	}  
+	
+	#dialog-text {  
+		margin-left: 20px;
+		color: #f0f0f0;
+		margin-bottom: 10px;  
+	}  
+	
+	#continue-button {  
+		position: absolute; 
+		right: 30px; 
+		bottom: 30px;  
+		padding: 5px 10px;  
+		cursor: pointer;  
+		background: url('./img/continue.svg') no-repeat center;  
+		background-size: 25px;
+		text-indent: -9999px;  /* 隐藏原有的文字 */
+		animation: move 2s infinite;  /* 添加一个无限循环的动画 */
+	}
+	
+	@keyframes move {
+		0% { transform: translateY(0); }
+		50% { transform: translateY(10px); }
+		100% { transform: translateY(0); }
+	}
+	
+	
+
+	.location {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: transparent;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+		animation: glow 2s infinite;
+	}
+	
+	.location:hover {
+		box-shadow: 0 0 50px rgba(0,0,0,0.7);
+	}
+	
+	@keyframes glow {
+		0% {
+			box-shadow: 0 0 5px #f2f886, 0 0 25px #f2f886, 0 0 50px #f2f886, 0 0 200px #f2f886;
+		}
+		100% {
+			box-shadow: 0 0 10px #f2f886, 0 0 35px #f2f886, 0 0 60px #f2f886, 0 0 300px #f2f886;
+		}
+	}
+	
+	
+
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0,0,0,0.4);
+	}
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 46.6%;
+	}
+	.modal-content img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+
+
